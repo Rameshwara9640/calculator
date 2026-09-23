@@ -1,0 +1,17 @@
+name: CI-pipeline
+
+on:
+  push:
+    branches: [ Dev ]
+  pull_request:
+    branches: [ Dev ]
+
+jobs:
+    build:
+        
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v3
+        - name: print the normal message
+          run: echo "Hello raised pull request to Dev branch"
